@@ -1,0 +1,6 @@
+.vscode
+*.pem
+*.txt
+*.csr
+.DS_Store
+desktop.ini
