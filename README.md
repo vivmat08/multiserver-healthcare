@@ -26,6 +26,13 @@ There are 3 phases in this protocol:
 
 Make sure you are running any code from its own directory.
 
+Now, the first step before starting the implementation of this paper is to create a new cryptographic key pair and a certificate along with it ("certificate.pem" and "key.pem" files in the Registration Center directory). This step is necessary because the certificate and the key pair are local to all the systems and are generated using MAC Address of the system. Run the following command in terminal to generate this. 
+```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+```
+
+This command should be run in the Registration Center directory
+
 For the registration phase, first go to the registration directory, and run the regCenter_regPhase.py file by doing
 ```
 python3 regCenter_regPhase.py
